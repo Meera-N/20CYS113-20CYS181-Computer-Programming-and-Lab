@@ -4,7 +4,7 @@
 int main () {
 
     //declaring variables	
-    float a, b, c, rt ;
+    float a, b, c, rt1, rt2;
     //getting input
     printf("In the equation ax^2 + bx + c,\nWe need the values of a, b and c.");
     printf("\nEnter value of a :\n");
@@ -14,7 +14,15 @@ int main () {
     printf("\nEnter value of c :\n");
     scanf("%f", &c);
     //calculation
-    rt = (-b + sqrt(b*b - 4*a*c))/2*a;
+    rt1 = (-b + sqrt(b*b - 4*a*c))/(2*a);
     //output
-    printf("The root is %lf",rt);
+    printf("The root is %lf \n",rt1);
+
+    //calculation
+    rt2 = (-b - sqrt(b*b - 4*a*c))/(2*a);
+    //output
+    printf("The root is %lf \n",rt2);
+    // use -lm after compiling command
 }
+
+
