@@ -2,7 +2,7 @@
 #define HALF 0.5
 int main() {
 
-// Declaring variables	
+// Declaring variables a b and c
 int a, b ;
 double c ;
 
