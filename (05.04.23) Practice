@@ -22,7 +22,7 @@ int main () {
     rt2 = (-b - sqrt(b*b - 4*a*c))/(2*a);
     //output
     printf("The root is %lf \n",rt2);
-    // use -lm after compiling command
+    //use -lm after compiling command (after name)
 }
 
 
