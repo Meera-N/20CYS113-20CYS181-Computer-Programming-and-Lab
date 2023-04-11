@@ -1,0 +1,66 @@
+#include<stdio.h>
+int main(){
+
+//Program to experiment with typecasting
+
+//declaring all variables together
+int itotal_mark, ino_of_subjects, iaverage ;
+
+double dtotal_mark, dno_of_subjects, daverage;
+
+//int, int and int
+printf("\n\nThis is for data type: int, int & int\n");
+
+//getting input
+printf("Please enter the totalmarks:\n");
+scanf("%d", &itotal_mark);
+
+printf("Please enter the number of subjects:\n");
+scanf("%d", &ino_of_subjects);
+
+//calculation1
+iaverage = itotal_mark / ino_of_subjects;
+daverage = itotal_mark / ino_of_subjects;
+printf("The average without typecasting is %d or %lf \n",iaverage,daverage);
+
+//calculation2
+iaverage = (double) itotal_mark / ino_of_subjects;
+daverage = (double) itotal_mark / ino_of_subjects;
+
+printf("The average with collective typecasting is %d or %lf \n",iaverage,daverage);
+
+//calculation3
+iaverage = (double) itotal_mark / (double) ino_of_subjects;
+daverage = (double) itotal_mark / (double) ino_of_subjects;
+
+printf("The average with seperate typecasting is %d or %lf \n",iaverage,daverage);
+
+
+//double, double and double
+printf("\n\nThis is for data type: double, double & double\n");
+
+//getting input
+printf("Please enter the totalmarks:\n");
+scanf("%lf", &dtotal_mark);
+
+printf("Please enter the number of subjects:\n");
+scanf("%lf", &dno_of_subjects);
+
+//calculation1
+daverage = dtotal_mark / dno_of_subjects;
+
+printf("The average without typecasting is %lf \n",daverage);
+
+//calculation2
+daverage = (int) itotal_mark / ino_of_subjects;
+iaverage = dtotal_mark / dno_of_subjects;
+
+printf("The average with collective typecasting is %d or %lf \n",iaverage,daverage);
+
+//calculation3
+daverage = (int) itotal_mark / (int) ino_of_subjects;
+
+printf("The average with seperate typecasting is %lf \n",daverage);
+
+}
+
