@@ -2,7 +2,7 @@
 int main() {
 	int n;
 	int c = 0;
-//getting value for n
+//getting value for n from user
 printf("Please enter the value you want to check if prime or not :\n");
 scanf("%d", &n)	;
 	for(int i = 2; i < n; i++ ){
