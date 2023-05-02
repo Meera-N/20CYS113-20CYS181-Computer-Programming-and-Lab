@@ -1,0 +1,23 @@
+#include<stdio.h>
+#define REW 50
+
+int main(){
+      
+        //declaring values
+	int srtkm, endkm, reward;
+
+        //getting input
+	printf("Enter the value on meter before beginning shift : \n");
+	scanf("%d", &srtkm );
+
+        printf("Enter the value on meter after ending shift : \n");
+        scanf("%d", &endkm );
+
+        //calculation
+	reward = (endkm-srtkm)*REW;
+
+	//result
+	printf("The bonus that the employee will recieve is %d.\nThankyou for your hardwork!\n",reward);
+
+}
+
