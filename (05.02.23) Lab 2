@@ -1,0 +1,24 @@
+#include<stdio.h>
+
+int main(){
+
+    //declaring variables
+    double rate, vol ;
+    int min ;
+
+    //getting input
+    printf("Please enter the quantity of medicine to be administered in ml: \n");
+    scanf("%lf",&vol);
+
+    printf("Please enter the time for which medicine must be administered in minutes: \n");
+    scanf("%d",&min);
+
+    //calculation
+    rate= vol/(min/60);
+
+    //outputting result
+    printf("The volume of medicine to be administered : %1.2lf ml \nThe rate at which medicine is to be administered : %1.2lf mm/hour \n", vol,rate);
+
+}
+
+	    
