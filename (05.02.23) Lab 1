@@ -1,0 +1,18 @@
+#include<stdio.h>
+
+int main()
+       {
+	//declaring 
+        double t, temp ; 
+	
+	//getting input
+	printf("Please enter the time elapsed :\n");
+        scanf("%lf",&t);
+
+	//calculation
+	temp = ((4*t*t)/(t+2))-20 ;
+
+	//outputting
+	printf("The temperature is %lf. \n",temp);
+
+       }
