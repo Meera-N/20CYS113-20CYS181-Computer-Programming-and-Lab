@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+    int numi, numf, numt, i       ;
+ 
+    printf("Please enter the number you want to reverse:\n") ;
+    scanf("%d",&numi)             ;
+    for(i=numi ; i>0 ;)
+    {   numt = i % 10             ;
+        numf = numt + (numf * 10) ;
+        i    = i / 10             ;
+    }
+    printf("%d \n", numf)         ;
+}
