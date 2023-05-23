@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main(){
+	//declaration
+	int num[5];
+	double total;
+        char name[20];
+	double coin[5]={0.5,1,2,5,10};
+       	//inputting info
+	printf("Please enter your name:\n");
+        scanf("%s", name);
+	for(int i=0; i<5 ;i++){
+		printf("How many ₹%.2f coins do you have?\n",coin[i]) ;
+		scanf("%d",&num[i]);}	
+        // Calculating
+        for(int i = 0; i < 5; i++){
+        total = total + (coin[i] * num[i]);}
+	// Outputting
+        printf("For %s, the amount collected is ₹%.2lf\n", name, total);
+	}
+
+
