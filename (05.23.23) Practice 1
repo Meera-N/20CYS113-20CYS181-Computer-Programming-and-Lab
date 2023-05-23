@@ -1,0 +1,51 @@
+#include<stdio.h>
+int main(){
+
+   //defining all the parameters we need	
+   int marks[6];
+   int total,num;
+   struct students{
+        struct name{char firstname[20]; char secondname[20];} n;
+        int rollnum;
+        char fathername[20];
+        char mothername[20];
+        int contactnum;
+        int sem1sgpa ;
+        int sem2sgpa ;
+        int cgpa     ;} s[85];
+
+   //making a loop to get info
+   printf("How many students are in your class? \n");
+   scanf("%d",&num);
+  
+   for(int i=0; i<num; i++){
+	   printf("Please enter student's name:\n");
+           scanf("%s %s",s[i].n.firstname,s[i].n.secondname);		   
+           printf("Please enter student's roll number:\n");
+	   scanf("%d",&s[i].rollnum);
+           printf("Please enter student's father's name:\n");
+           scanf("%s",s[i].fathername);
+	   printf("Please enter student's mother's name:\n");
+           scanf("%s",s[i].mothername);
+           printf("Please enter student's emergency contact number:\n");
+           scanf("%d",&s[i].contactnum);};
+ 
+   //calculating sgpa
+    for(int i=0; i<num; i++){
+   	    for(int j=0; j<6; j++){
+		   printf("Please enter marks for subject %d for student %d\n",j+1,i+1);
+		   scanf("%d",&marks[j]);
+		   if (marks[j]>100||marks[j]<0){
+			   printf("-----Enter a valid mark between 0 & 100-----\n");
+			   j= j-1;};};
+		   total = marks[0]+marks[1]+marks[2]+marks[3]+marks[4]+marks[5];
+           s[i].sem1sgpa= total/(6*10) ;
+           s[i].cgpa = s[i].sem1sgpa;
+           //initialising total
+	   total=0;   };
+
+   //outputting the structure
+   for(int i=0; i<num; i++){
+	   printf("The student's name is %s %s.\nRoll Number:%d \nFather's name:%s \nMother's name:%s \nEmergency contact number:%d \nSGPA for Semester 1:%d \nSGPA for Semester 2:%d \nCGPA:%d\n", s[i].n.firstname,s[i].n.secondname,s[i].rollnum, s[i].fathername,s[i].mothername,s[i].contactnum,s[i].sem1sgpa,s[i].sem2sgpa,s[i].cgpa);};}
+          			   
+		 
