@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main(){
+	char x[10];
+	printf("Please enter name of file you want to search for\n");
+	scanf("%s",x);
+	 
+	char *fd ;
+	fd=fopen(x,"r");
+
+	if (fd==NULL)
+	{printf("Unavailable!\n");}
+
+	else {printf("Available!\n");}}
