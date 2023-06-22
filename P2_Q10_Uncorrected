@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main(){
+
+struct compNum{
+   int inum;
+   int rnum;
+   char sign;
+   } c[2];
+   
+   for(int i=0; i<2;i++){
+     printf("Please enter real part:\n");
+     scanf("%d",&c[i].rnum);
+     printf("Please enter imaginary part:\n");
+     scanf("%d",&c[i].inum);
+     printf("Please enter sign of number:\n");
+     scanf("%d",&c[i].sign);
+     if (sign!=+||sign!=-){printf("Invalid"); break;}}
+     
+  int res1, res2;
+   res1=c.inum[0]*c.inum[1];
+   res2=c.rnum[0]*c.rnum[1];
+   
+   if(c[0].sign!=c[1].sign){
+    printf("The product is -(%d +%di)", res2, res1);}
+   else { printf("The product is %d +%di", res2, res1);}
+   }
