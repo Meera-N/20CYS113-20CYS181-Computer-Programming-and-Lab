@@ -13,7 +13,7 @@ struct compNum{
      printf("Please enter imaginary part:\n");
      scanf("%d",&c[i].inum);
      printf("Please enter sign of number:\n");
-     scanf("%d",&c[i].sign);
+     scanf("%c",&c[i].sign);
      if (sign!=+||sign!=-){printf("Invalid"); break;}}
      
   int res1, res2;
