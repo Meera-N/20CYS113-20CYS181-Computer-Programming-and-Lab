@@ -1,0 +1,33 @@
+#include<stdio.h>
+int main(){
+	char name[100][5];
+	int ebnum[5] ;
+	int units[5] ;
+       //infomation is collected
+	for(int i=0 ; i<5 ;i++){
+         for(int j=0 ; j<10 ;j++){
+       	 scanf("%c",&name[i][j]);}
+         scanf("%d",&ebnum[i]);
+         scanf("%d",&units[i]);
+	 //calculation
+ 	int price = 0;
+if (units[i] > 600) {
+    price += (units[i] - 600) * 8;
+    units[i] = 600;
+}
+if (units[i] > 500) {
+    price += (units[i] - 500) * 6;
+    units[i] = 500;
+}
+if (units[i] > 400) {
+    price += (units[i] - 400) * 4.5;
+    units[i] = 400;
+}
+if (units[i] > 100) {
+    price += (units[i] - 100) * 2.25;
+    units[i] = 100;
+}
+	//output 
+	printf("The electricity bill is %d.\n",price);}
+      }
+              
