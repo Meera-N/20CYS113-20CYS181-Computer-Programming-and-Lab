@@ -1,0 +1,26 @@
+#include <stdio.h>
+struct shape {
+    union dimensions {
+        double length[2];
+        float radius;
+    } d;
+    enum type { Circle = 1, Rectangle };
+};
+int main() {
+    struct shape s; 
+    int c;
+    float area;
+    scanf("%d", &c);
+    if (c == Circle) {
+        scanf("%f", &s.d.radius);
+        area = 3.14 * s.d.radius * s.d.radius;
+        printf("Area of the circle: %.4f units", area); }
+    else if (c == Rectangle) {
+        scanf("%lf %lf", &s.d.length[0], &s.d.length[1]);
+        area = s.d.length[0] * s.d.length[1];
+        printf("Area of the rectangle: %.4lf units\n", area); }
+    else {
+        printf("Invalid choice!\n");
+    }
+}
+
