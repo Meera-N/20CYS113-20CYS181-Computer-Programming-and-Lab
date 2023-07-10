@@ -1,0 +1,23 @@
+Start the program
+Declare i, j and rows
+Input value for rows
+Output “*” & start a new line
+For integer i from 1 to rows:
+  For integer j from 1 to i:
+      If j is equal to 1:
+         Output “*”
+      Else : 
+         Output j
+  For integer j from i-1 to 1:
+     Output j
+  Output “*” & start a new line
+For integer i from rows-1 to 1:
+     For integer j from 1 to i:
+      If j is equal to 1:
+         Output “*”
+      Else : 
+         Output j
+  For integer j from i-1 to 1:
+     Output j
+  Output “*” & start a new line
+End of program
