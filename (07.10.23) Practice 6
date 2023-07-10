@@ -1,0 +1,14 @@
+Start program
+Declare n & x
+Input value of n
+For integer i from 0 to 2n - 1:
+    If i is less than n:
+       Assign x = 2i+1
+    Else:
+       Assign x =2(2n-i)-3
+    For integer j from 0 to x:
+       Output  “  “
+    For integer k from 0 to 2n-x:
+       Output the value of k + d
+    Start a new line
+End of program 
