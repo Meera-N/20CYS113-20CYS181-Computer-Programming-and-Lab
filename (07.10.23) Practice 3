@@ -1,0 +1,12 @@
+Start program
+Declare num, dig1 and dig2
+Input num
+Assign dig1=num
+While dig1 greater than 10:
+   Divide dig1 by 10
+Assign dig2=num%10
+If dig1 is equal to dig2:
+     Output is a palindrome
+If dig1 is not equal to dig2:
+     Output is not a palindrome
+End of program
