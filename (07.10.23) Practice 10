@@ -1,0 +1,21 @@
+#include<stdio.h>
+int prim(int n){
+    if (n == 0 || n == 1) {
+        return; }
+    for (int i = 2; i <= n / 2; ++i) {
+        if (n % i == 0)
+           return; }
+    return 1;}
+void genPrim(int dig1, int dig2) {
+    printf("Prime numbers between %d and %d are:", dig1, dig2);
+    for (int i = dig1; i <= dig2; i++) {
+        if (prim(i)) {
+            printf(" %d", i); }
+    }
+    printf("\n");}
+int main() {
+    int dig1, dig2;  
+    scanf("%d", &dig1);
+    scanf("%d", &dig2);
+    genPrim(dig1, dig2);
+    return ;}
