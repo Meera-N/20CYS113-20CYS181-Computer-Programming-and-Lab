@@ -1,0 +1,80 @@
+#include<stdio.h>
+void error(){
+        printf("This is an invalid sudoku square.\n");
+        return;             fgets(content,1000,file)
+}
+struct player{
+    char name[20];
+    int age;
+};
+
+void main(){
+      printf("WELCOME TO SUDOKU CHECKER!\n");
+      struct player p;
+      printf("Please enter your name:\n");
+      scanf("%s",p.name);
+      printf("Please enter your age:\n");
+      scanf("%d",&p.age);
+
+
+        int ssq[9][9];
+        int num;
+        struct errormsg ;
+                printf("Please enter the number of rows you want in the matrix:\n(Remember that the number should be between 3 and 10)\n");
+        scanf("%d",&num);
+        if (num>9){
+                printf("Please enter a value equal to or less than 9\n");
+                return;
+        }
+        if (num<4){
+                printf("Please enter a value greater than 3\n");
+                return;
+        }
+        for (int i=0;i<num;i++){
+           for (int j=0;j<num;j++){
+               printf("Please enter value for row %d column %d: ",i+1, j+1);
+               scanf("%d",&ssq[i][j]);
+           }
+        }
+
+        for (int i=0;i<num;i++){
+           for (int j=0;j<num;j++){
+               printf("%d\t",ssq[i][j]);
+               }
+           printf("\n");
+        }
+
+        for (int i=0;i<num;i++){
+           for (int j=0;j<num;j++){
+              if(ssq[i][j]>num||ssq[i][j]<1){
+                    printf("This is an invalid sudoku square.");                      ;
+                    return;
+              }
+           }
+        }
+
+       int temp;
+       int temp2;
+       for (int i=0;i<num;i++){
+          for (int j=0;j<num;j++){
+            temp=ssq[i][j];
+            temp2=ssq[i][j];
+            for (int k=0;k<num;k++){
+              if (k!=j){
+                if (temp==ssq[i][k]){
+                     printf("This is an invalid sudoku square.");
+                     return;
+                }
+              }
+              if (k!=i){
+                if (temp==ssq[k][j]){
+                     printf("This is an invalid sudoku square.");
+                     return;
+                }
+              }
+            }
+          }
+       }
+
+      printf("This is a valid sudoku square.");
+ }
